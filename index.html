@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Happy Birthday Jerica</title>
+</head>
+<body>
+  <div class="card">
+    <!-- External Moana Image -->
+    <img src="Moana.png" alt="Moana and the Ocean" class="birthday">
+    
+    <div class="text">
+      <h1>Happy Birthday, Jerica!</h1>
+      <p>I wanna start by reminding you that Moana 2 is releasing on November 27, 2024!!</p>
+      <p class="muted">Also, I hope you like the card, it's not the prettiest, and I hope the "open card" button works</p>
+      <button class="open-card-btn" onclick="openCard()">Open the Card</button>
+    </div>
+    
+    <!-- Inner card content with new image -->
+    <div class="inner-card" id="innerCard">
+      <h1>Special Day!</h1>
+      <p>Anyways, I wanted to say I hope you have a wonderful birthday, although I miss you so much, I'm not trying to turn this into an emotional birthday, so I'll leave it on a happy note by wishing you a very special day and the greatest year ahead...hAve lots of bUssin cake for me.</p>
+      <p class="quote">Keep that smile up like in the picture -Jason:)</p>
+      <!-- Replaced the inner image -->
+      <img src="Jericassmile.png" alt="Jerica Smiling" style="max-height: 150px; margin-top: 1em;">
+    </div>
+  </div>
+
+  <script>
+    function openCard() {
+      const innerCard = document.getElementById('innerCard');
+      innerCard.classList.toggle('visible');
+    }
+  </script>
+</body>
+</html>

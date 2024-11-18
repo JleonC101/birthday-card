@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+  transition: all 0.2s ease-in-out;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #0077be, #87ceeb); /* Oceanic gradient */
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Patrick Hand', Handle; /* Moana-like font */
+}
+
+/* Card Style */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5em;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Moana Background Decorations */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://example.com/moana-pattern.png') no-repeat center/cover; /* Replace with actual Moana pattern image URL */
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.card img.birthday {
+  max-height: 30vh;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.text {
+  padding: 1em;
+  z-index: 2;
+  color: #333;
+}
+
+/* Button to Open Card */
+.open-card-btn {
+  background: #ffa500; /* Tropical orange */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.open-card-btn:hover {
+  background: #ff7f00;
+}
+
+/* Inner Card Style */
+.inner-card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  background: linear-gradient(to bottom, #ffe7a1, #ffcf4b); /* Sand-like gradient */
+  border-radius: 12px;
+  z-index: 3;
+}
+
+.inner-card.visible {
+  display: flex;
+}
+
+/* Text Content Inside */
+.inner-card h1 {
+  font-size: 2.5rem;
+  color: #2e3a24; /* Earthy green */
+}
+
+.inner-card p {
+  font-size: 1.2rem;
+  color: #5a4b39; /* Warm brown */
+}
+
+.inner-card .quote {
+  margin-top: 1em;
+  font-style: italic;
+  color: #4a4130;
+}
+
+/* Media Queries */
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 100%;
+    max-width: 40vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card img.birthday {
+    width: 100%;
+    max-width: 40vw;
+    max-height: unset;
+  }
+}
